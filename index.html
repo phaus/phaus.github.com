@@ -33,48 +33,6 @@
     </div>
 		<script src="javascripts/jquery-1.8.2.min.js" type="text/javascript"></script>
     <script src="javascripts/jquery.jfeed.pack.js" type="text/javascript"></script>    
-    <script type="text/javascript">
-jQuery(function() {
-
-    jQuery.getFeed({
-        url: 'https://github.com/phaus.atom',
-        success: function(feed) {
-
-            var html = '';
-            
-            for(var i = 0; i < feed.items.length && i < 23; i++) {
-            
-                var item = feed.items[i];
-                
-                html += '<h3>'
-                + '<a href="'
-                + item.link
-                + '">'
-                + item.title
-                + '</a>'
-                + '</h3>';
-                
-                html += '<p>'
-                + item.updated
-                + '</p>';
-                
-                html += '<p>'
-                + item.description
-                + '</p>';
-            }
-            
-            jQuery('#main-content').append(html);
-            jQuery('#main-content').append('<h3>'
-            + '<a href="'
-            + feed.link
-            + '">'
-            + feed.title
-            + '</a>'
-            + '</h3>');            
-        }    
-    });
-});
-    </script>
 		<!-- Piwik -->
 		<script type="text/javascript">var pkBaseURL = (("https:" == document.location.protocol) ? "https://cleopatra.consolving.de/piwik/" : "http://cleopatra.consolving.de/piwik/");
 document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
